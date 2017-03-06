@@ -78,9 +78,54 @@
       </section>
       <section class="contacts">
         <h2 class="contacts__title">Контакты</h2>
-
+        <div class="contacts__info">
+          <div class="contacts__email">
+            e-mail:
+            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </div>
+          <div class="contacts__address">
+            адрес:
+            <span>г. Санкт-Петербург,
+                  ул. Большая Конюшенная,
+                  д. 19/8, офис 101</span>
+          </div>
+        </div>
+        <div class="contacts__map">
+          <!-- Пока просто заглушку вставлю. Потом сделаю интерактивную карту -->
+          <img src="http://placehold.it/320x457" alt="Карта" width="320" height="457">
+        </div>
+        <a class="btn" href="#">Напишите нам</a>
       </section>
     </main>
-
+    <footer class="page-footer">
+      <p class="page-footer__social">
+        <span class="social-links">
+          <a class="social-link social-link--in" href="#">Наш инстаграм</a>
+          <a class="social-link social-link--fb" href="#">Наш фейсбук</a>
+          <a class="social-link social-link--tw" href="#">Наш твитер</a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a class="page-footer__copyright-link">
+          <img src="http://placehold.it/27x34" alt="HTMLAcademy" width="27" height="34">
+        </a>
+      </p>
+    </footer>
+    <section class="catalog-item__modal">
+      <h2 class="catalog-item__modal-header">Добавить в корзину</h2>
+      <form action="#" method="post">
+        <fieldset class="catalog-item__modal-fieldset">
+          <legend>Выберете размер</legend>
+          <input id="size-s" type="radio" name="size" value="s">
+          <label for="size-s">S</label>
+          <input id="size-m" type="radio" name="size" value="m">
+          <label for="size-m">M</label>
+          <input id="size-l" type="radio" name="size" value="l">
+          <label for="size-l">L</label>
+        </fieldset>
+      </form>
+      <button class="btn catalog-item__modal-btn" type="submit">Добавить</button>
+    </section>
   </body>
 </html>
