@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Мишка</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__logo">
+        <a href="index.html">
+          <img src="http://placehold.it/86x35" alt="Mishka" width="86" height="35">
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed">
+        <button class="main-nav__toogle" type="button"></button>
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
+            <a class="main-nav__item-link" href="catalog.html">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__item-link main-nav__item-link--active" href="form.html">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">Поиск по сайту</li>
+          <li class="main-nav__item">Корзина: пока пуста</li>
+        </ul>
+      </nav>
+      <h1 class="page-title">Каталог товаров</h1>
+    </header>
+    <!--Не уверен, насколько нужно использовать тег main -->
+    <main class="page-main">
+      <section class="catalog-item">
+        <a class="catalog-item__img" href="#">
+          <img src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
+        </a>
+        <a class="catalog-item__header" href="#">
+          <h2>Зайчик-попрыгайчик</h2>
+        </a>
+        <p class="catalog-item__descr">Рост 30 см, вес 200 г</p>
+        <span class="catalog-item__price">1 200 руб.</span>
+        <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
+      </section>
+      <section class="catalog-item">
+        <a class="catalog-item__img" href="#">
+          <img src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
+        </a>
+        <a class="catalog-item__header" href="#">
+          <h2>Корзинка для белья</h2>
+        </a>
+        <p class="catalog-item__descr">Диаметр 15 см, высота 10 см</p>
+        <span class="catalog-item__price">690 руб.</span>
+        <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
+      </section>
+      <section class="catalog-item">
+        <a class="catalog-item__img" href="#">
+          <img src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
+        </a>
+        <a class="catalog-item__header" href="#">
+          <h2>Большая корзинка для игрушек</h2>
+        </a>
+        <p class="catalog-item__descr">Диаметр 30 см, высота 30 см</p>
+        <span class="catalog-item__price">1 500 руб.</span>
+        <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
+      </section>
+      <section class="production">
+        <h2 class="production__header">Процесс производства</h2>
+        <div class="production__video">
+          <img src="http://placehold.it/260x150" alt="Видео" width="260"  height="150">
+        </div>
+        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <a class="btn" href=#>Сделать заказ</a>
+      </section>
+    </main>
+    <footer class="page-footer">
+      <p class="page-footer__social">
+        <span class="social-links">
+          <a class="social-link social-link--in" href="#">Наш инстаграм</a>
+          <a class="social-link social-link--fb" href="#">Наш фейсбук</a>
+          <a class="social-link social-link--tw" href="#">Наш твитер</a>
+        </span>
+      </p>
+      <p class="page-footer__copyright">
+        Разработано:
+        <a class="page-footer__copyright-link">
+          <img src="http://placehold.it/27x34" alt="HTMLAcademy" width="27" height="34">
+        </a>
+      </p>
+    </footer>
+    <section class="catalog-item__modal">
+      <h2 class="catalog-item__modal-header">Добавить в корзину</h2>
+      <form action="#" method="post">
+        <fieldset class="catalog-item__modal-fieldset">
+          <legend>Выберете размер</legend>
+          <input id="size-s" type="radio" name="size" value="s">
+          <label for="size-s">S</label>
+          <input id="size-m" type="radio" name="size" value="m">
+          <label for="size-m">M</label>
+          <input id="size-l" type="radio" name="size" value="l">
+          <label for="size-l">L</label>
+        </fieldset>
+      </form>
+      <button class="btn catalog-item__modal-btn" type="submit">Добавить</button>
+    </section>
+  </body>
+</html>
