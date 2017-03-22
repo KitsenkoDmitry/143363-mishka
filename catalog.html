@@ -9,21 +9,27 @@
     <header class="page-header">
       <div class="page-header__logo">
         <a href="index.html">
-          <img src="http://placehold.it/86x35" alt="Mishka" width="86" height="35">
+          <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
         </a>
       </div>
-      <nav class="main-nav main-nav--closed">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toogle" type="button"></button>
-        <ul class="main-nav__items">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
           <li class="main-nav__item">
             <a class="main-nav__item-link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__item-link main-nav__item-link--active" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">Поиск по сайту</li>
-          <li class="main-nav__item">Корзина: пока пуста</li>
+          <li class="main-nav__item">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__item">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
         </ul>
+        </div>
       </nav>
       <h1 class="page-title">Каталог товаров</h1>
     </header>
@@ -101,5 +107,6 @@
       </form>
       <button class="btn catalog-item__modal-btn" type="submit">Добавить</button>
     </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

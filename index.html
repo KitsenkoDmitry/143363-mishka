@@ -6,32 +6,41 @@
     <title>Мишка</title>
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <a>
-          <img src="http://placehold.it/86x35" alt="Mishka" width="86" height="35">
-        </a>
-      </div>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toogle" type="button"></button>
+    <header class="page-header page-header--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__logo">
+          <a>
+            <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+          </a>
+        </div>
+        <button class="main-nav__toogle" type="button">Меню</button>
+        <!-- <div class="main-nav__wrapper"> -->
         <ul class="main-nav__items">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="catalog.html">Каталог товаров</a>
+            <a href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="form.html">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">Поиск по сайту</li>
-          <li class="main-nav__item">Корзина: пока пуста</li>
         </ul>
+        <ul class="main-nav__user-items">
+          <li class="main-nav__user-item main-nav__user-item--search">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__user-item main-nav__user-item--cart">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="main-nav__help-items">
+          <li class="main-nav__help-item"><a  href="#">Новые поступления</a></li>
+          <li class="main-nav__help-item"><a href="#">Распродажа</a></li>
+        </ul>
+        <!-- </div> -->
+        <p class="main-nav__notes">Бесплатная доставка по России</p>
       </nav>
-      <!-- модификатор page-title--index использую для того,
-          чтобы поместить картинку на background -->
       <h1 class="page-title page-title--index">Милые штуки ручной<br> работы для дома</h1>
     </header>
-    <!--Не уверен, насколько нужно использовать тег main -->
     <main class="page-main">
-      <!--Долго думал, как обозвать эти две кнопки, решил реализовать таким образом  -->
       <section class="category">
         <h2 class="title title--hidden">Каталог</h2>
         <a href="#" class="category__btn">Предметы интерьера</a>
@@ -117,7 +126,7 @@
         </a>
       </p>
     </footer>
-    <section class="catalog-item__modal">
+    <section class="catalog-item catalog-item--modal">
       <h2 class="catalog-item__modal-header">Добавить в корзину</h2>
       <form action="#" method="post">
         <fieldset class="catalog-item__modal-fieldset">
@@ -132,5 +141,6 @@
       </form>
       <button class="btn catalog-item__modal-btn" type="submit">Добавить</button>
     </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
