@@ -14,7 +14,6 @@
           </a>
         </div>
         <button class="main-nav__toogle" type="button">Меню</button>
-        <!-- <div class="main-nav__wrapper"> -->
         <ul class="main-nav__items">
           <li class="main-nav__item">
             <a href="catalog.html">Каталог товаров</a>
@@ -35,7 +34,6 @@
           <li class="main-nav__help-item"><a  href="#">Новые поступления</a></li>
           <li class="main-nav__help-item"><a href="#">Распродажа</a></li>
         </ul>
-        <!-- </div> -->
         <p class="main-nav__notes">Бесплатная доставка по России</p>
       </nav>
       <h1 class="page-title page-title--index">Милые штуки ручной<br> работы для дома</h1>
@@ -43,8 +41,8 @@
     <main class="page-main">
       <section class="category">
         <h2 class="title title--hidden">Каталог</h2>
-        <a href="#" class="category__btn">Предметы интерьера</a>
-        <a href="#" class="category__btn category__btn--bottom">Детские игрушки</a>
+        <a class="category__btn category__btn--left" href="#">Предметы интерьера</a>
+        <a class="category__btn category__btn--right" href="#">Детские игрушки</a>
       </section>
       <section class="product">
         <h2 class="product__title">Вязаные корзинки</h2>
@@ -64,12 +62,12 @@
             <td class="product__value">15см</td>
           </tr>
         </table>
-        <img class="product__img" src="http://placehold.it/260x315" alt="Вязаные корзинки">
+        <img class="product__img" src="img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки">
         <p class="product__price">Цена: 990 руб.</p>
-        <a class="btn" href="#">Заказать</a>
+        <a class="btn btn--product" href="#">Заказать</a>
       </section>
       <section class="about-us">
-        <h2 class="title">Коротко о нас:</h2>
+        <h2 class="title title--about-us">Коротко о нас:</h2>
         <p class="about-us__descr">Экологически чистые материалы</p>
         <p class="about-us__descr about-us__descr--2">Скандинавский стиль по российской цене</p>
         <p class="about-us__descr about-us__descr--3">Увеличивает лайки на фотографиях</p>
@@ -78,40 +76,48 @@
         <p class="about-us__descr about-us__descr--6">Поставляется в подарочной упаковке</p>
       </section>
       <section class="feed-backs">
-        <h2 class="title">Отзывы</h2>
+        <h2 class="title title--feed-backs">Отзывы</h2>
         <blockquote class="feed-backs__quote">
           <p>Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-          <cite class="feed-backs__сlient-name">
+          <cite class="feed-backs__client-name">
             Анастасия Красильникова
-            <span class="feed-backs__сlient-email">@misssssiskras</span>
           </cite>
+          <span class="feed-backs__сlient-email">@misssssiskras</span>
         </blockquote>
-        <button class="feed-backs__prev" type="button">Предыдущий отзыв</button>
-        <button class="feed-backs__next" type="button">Следующий отзыв</button>
-        <a class="btn" href="#">Написать</a>
+        <div class="feed-backs__btn-wrapper">
+          <button class="feed-backs__btn feed-backs__btn--prev" type="button">Предыдущий отзыв</button>
+          <button class="feed-backs__btn feed-backs__btn--next" type="button">Следующий отзыв</button>
+        </div>
+        <a class="btn btn--feed-backs" href="#">Написать</a>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <div class="contacts__info">
-          <div class="contacts__email">
-            e-mail:
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+        <div class="contacts__wrapper">
+          <h2 class="title title--contacts">Контакты</h2>
+          <div class="contacts__info">
+            <div class="contacts__email">
+              e-mail:
+              <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+            </div>
+            <div class="contacts__address">
+              адрес:
+              <span>г. Санкт-Петербург,
+                ул. Большая Конюшенная,<br>
+                д. 19/8, офис 101</span>
+              </div>
+            </div>
           </div>
-          <div class="contacts__address">
-            адрес:
-            <span>г. Санкт-Петербург,
-                  ул. Большая Конюшенная,
-                  д. 19/8, офис 101</span>
-          </div>
-        </div>
         <div class="contacts__map">
-          <!-- Пока просто заглушку вставлю. Потом сделаю интерактивную карту -->
-          <img src="http://placehold.it/320x457" alt="Карта" width="320" height="457">
+          <img src="img/map-mobile@1x.jpg" alt="Карта" width="320" height="457">
         </div>
-        <a class="btn" href="#">Напишите нам</a>
+        <div class="contacts__wrapper contacts__wrapper--bottom">
+          <a class="btn btn--contacts" href="#">Напишите нам</a>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer__logo">
+        <img src="img/logo-mobile.svg" alt="Мишка" width="102">
+      </div>
       <p class="page-footer__social">
         <span class="social-links">
           <a class="social-link social-link--in" href="#">Наш инстаграм</a>
@@ -120,18 +126,15 @@
         </span>
       </p>
       <p class="page-footer__copyright">
-        Разработано:
-        <a class="page-footer__copyright-link">
-          <img src="http://placehold.it/27x34" alt="HTMLAcademy" width="27" height="34">
-        </a>
+        <a href="#" class="page-footer__copyright-link">Разработано</a>
       </p>
     </footer>
-    <section class="catalog-item catalog-item--modal">
-      <h2 class="catalog-item__modal-header">Добавить в корзину</h2>
+    <section class="catalog-item__modal catalog-item__modal--closed">
+      <h2 class="catalog-item__modal-header">Добавить<br>в корзину</h2>
       <form action="#" method="post">
         <fieldset class="catalog-item__modal-fieldset">
-          <legend>Выберете размер</legend>
-          <input id="size-s" type="radio" name="size" value="s">
+          <legend>Выберете размер:</legend>
+          <input id="size-s" type="radio" name="size" value="s" checked>
           <label for="size-s">S</label>
           <input id="size-m" type="radio" name="size" value="m">
           <label for="size-m">M</label>
@@ -139,7 +142,7 @@
           <label for="size-l">L</label>
         </fieldset>
       </form>
-      <button class="btn catalog-item__modal-btn" type="submit">Добавить</button>
+      <button class="btn btn--modal" type="submit">Добавить</button>
     </section>
     <script src="js/scripts.js"></script>
   </body>

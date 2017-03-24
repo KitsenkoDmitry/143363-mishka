@@ -1,6 +1,7 @@
 .about-us {
   padding-left: 30px;
   padding-right: 30px;
+  margin-bottom: 55px;
   &__descr {
     padding-top: 55px;
     margin-bottom: 25px;
@@ -14,18 +15,41 @@
     background-position: left top;
   }
   &__descr--2 {
-      background-image: url("../img/icon-feature-2.svg");
-  }
-  &__descr--3 {
       background-image: url("../img/icon-feature-3.svg");
   }
+  &__descr--3 {
+      background-image: url("../img/icon-feature-5.svg");
+  }
   &__descr--4 {
-      background-image: url("../img/icon-feature-4.svg");
+      background-image: url("../img/icon-feature-2.svg");
   }
   &__descr--5 {
-      background-image: url("../img/icon-feature-5.svg");
+      background-image: url("../img/icon-feature-4.svg");
   }
   &__descr--6 {
       background-image: url("../img/icon-feature-6.svg");
+  }
+}
+
+@media @tablet-width {
+  .about-us {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .about-us__descr {
+    flex-basis: 334px;
+  }
+}
+
+@media @desktop-width {
+  .about-us {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+  .about-us__descr {
+    flex-basis: 350px;
   }
 }

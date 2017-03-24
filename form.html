@@ -6,30 +6,35 @@
     <title>Мишка</title>
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
-        </a>
-      </div>
+    <header class="page-header page-header--nojs">
       <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toogle" type="button"></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
+        <div class="main-nav__logo">
+          <a>
+            <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+          </a>
+        </div>
+        <button class="main-nav__toogle" type="button">Меню</button>
+        <ul class="main-nav__items">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="catalog.html">Каталог товаров</a>
+            <a href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link--active" href="form.html">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">
+        </ul>
+        <ul class="main-nav__user-items">
+          <li class="main-nav__user-item main-nav__user-item--search">
             <a href="#">Поиск по сайту</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__user-item main-nav__user-item--cart">
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-        </div>
+        <ul class="main-nav__help-items">
+          <li class="main-nav__help-item"><a  href="#">Новые поступления</a></li>
+          <li class="main-nav__help-item"><a href="#">Распродажа</a></li>
+        </ul>
+        <p class="main-nav__notes">Бесплатная доставка по России</p>
       </nav>
       <h1 class="page-title">Вязание на заказ</h1>
     </header>
@@ -88,6 +93,9 @@
       </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer__logo">
+        <img src="img/logo-mobile.svg" alt="Мишка" width="102">
+      </div>
       <p class="page-footer__social">
         <span class="social-links">
           <a class="social-link social-link--in" href="#">Наш инстаграм</a>
@@ -96,10 +104,7 @@
         </span>
       </p>
       <p class="page-footer__copyright">
-        Разработано:
-        <a class="page-footer__copyright-link">
-          <img src="http://placehold.it/27x34" alt="HTMLAcademy" width="27" height="34">
-        </a>
+        <a href="#" class="page-footer__copyright-link">Разработано</a>
       </p>
     </footer>
     <script src="js/scripts.js"></script>

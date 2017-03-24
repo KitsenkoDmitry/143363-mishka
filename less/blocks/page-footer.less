@@ -4,3 +4,70 @@
   padding: 0 30px;
   background-color: #f1f1f1;
 }
+
+.page-footer__copyright {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 39px;
+  padding-right: 39px;
+  &-link {
+    position: relative;
+    display: block;
+    color: #000000;
+    font-size: 19px;
+    line-height: 18px;
+    text-decoration: none;
+    font-weight: bold;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 27px;
+      height: 34px;
+      background-image: url("../img/logo-htmlacademy.svg");
+      background-repeat: no-repeat;
+      background-position: center right;
+    }
+
+    &:hover {
+
+    }
+
+    &:active {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+
+.page-footer__logo {
+  display: none;
+}
+
+@media @tablet-width {
+  .page-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 668px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .page-footer__social {
+    margin: 0;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
+}
+
+@media @desktop-width {
+  .page-footer {
+    width: 1050px;
+  }
+}
