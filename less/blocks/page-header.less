@@ -1,3 +1,26 @@
 .page-header {
-  .wrapper();
+  position: relative;
+  padding-top: 80px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media @tablet-width {
+  .page-header {
+    position: static;
+    padding-top: 0;
+    width: 768px;
+  }
+}
+
+@media @desktop-width {
+  .page-header {
+    width: 1150px;
+  }
+}
+
+//Если JS не рабоатета
+.page-header--nojs {
+  position: static;
+  padding-top: 0;
 }

@@ -2,3 +2,87 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.feed-backs__quote {
+  margin: 0;
+  margin-bottom: 35px;
+  line-height: 30px;
+}
+
+.feed-backs__client-name {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
+  font-style: normal;
+  color: #000000;
+}
+
+.feed-backs__client-email {
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 400;
+  color: inherit;
+}
+
+.feed-backs__btn {
+  .dib();
+  margin-bottom: 38px;
+  width: 130px;
+  height: 51px;
+
+  font-size: 0;
+
+  border: 1px solid #ececec;
+
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  cursor: pointer;
+  outline: none;
+
+  &--prev {
+    margin-right: -5px;
+    background-image: url("../img/icon-left-arrow.svg");
+  }
+  &--next {
+    background-image: url("../img/icon-right-arrow.svg");
+  }
+}
+
+@media @tablet-width {
+  .feed-backs {
+    position: relative;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 75px;
+    padding-bottom: 50px;
+
+    background-color: #ffffff;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+  .feed-backs__client-name {
+    display: block;
+  }
+
+  .feed-backs__btn-wrapper {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+  }
+}
+
+@media @desktop-width {
+  .feed-backs {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 175px;
+  }
+
+  .feed-backs__btn-wrapper {
+    right: 0;
+  }
+}

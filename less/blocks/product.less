@@ -2,3 +2,134 @@
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.product__title {
+  font-size: 25px;
+  line-height: 30px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  color: #000000;
+}
+
+.product__category {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+
+.product__features {
+  border-collapse: collapse;
+  margin-bottom: 28px;
+  td {
+    padding-top: 12px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #ececec;
+  }
+}
+
+.product__feature {
+  width: 100px;
+}
+
+.product__value {
+  width: 160px;
+}
+
+.product__price {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media @tablet-width {
+  .product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 537px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .product__title {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 55px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .product__category {
+    order: 2;
+    align-self: flex-end;
+    width: 110px;
+    margin-top: 7px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .product__descr {
+    width: 300px;
+    margin-top: 100px;
+    margin-bottom: 35px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .product__features {
+    margin-bottom: 44px;
+  }
+
+  .product__img {
+    width: 333px;
+    height: 404px;
+    order: 3;
+    align-self: flex-end;
+  }
+
+  .product__price {
+    text-align: center;
+    width: 300px;
+    margin: 0;
+    margin-bottom: 30px
+  }
+
+  .product__value {
+    padding-right: 37px;
+  }
+}
+
+@media @desktop-width {
+  .product {
+    padding-left: 225px;
+  }
+
+  .product__title {
+    left: 225px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .product__category {
+    position: absolute;
+    top: 50px;
+    left: 75px;
+  }
+
+  .product__img {
+    width: 525px;
+    height: 636px;
+  }
+}

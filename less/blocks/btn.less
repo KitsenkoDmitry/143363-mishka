@@ -1,0 +1,69 @@
+.btn {
+  display: block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 100%;
+
+  box-sizing: border-box;
+
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+
+  border: 1px solid #444444;
+  outline: none;
+
+  background-color: #ffffff;
+  cursor: pointer;
+
+  &:hover {
+    color: #ffffff;
+    background-color: #444444;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--modal,
+  &--modal:hover,
+  &--modal:active {
+    color: #ffffff;
+    background-color: #63d1bb;
+    border-color: #63d1bb;
+  }
+}
+
+
+@media @tablet-width {
+  .btn--product {
+    width: 300px;
+  }
+
+  .btn--feed-backs {
+    position: absolute;
+    top: 75px;
+    right: 50px;
+    width: 175px;
+  }
+
+  .btn--contacts {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media @desktop-width {
+  .btn--feed-backs {
+    right: 0;
+  }
+
+  .btn--contacts {
+    margin-left: 0;
+  }
+}

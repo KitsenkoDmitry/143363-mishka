@@ -1,0 +1,32 @@
+.production {
+
+}
+
+@media @tablet-width {
+  .production {
+    display: flex;
+    flex-direction: column;
+  }
+  .production__video {
+    order: -1;
+  }
+}
+
+@media @desktop-width {
+  .production {
+    height: 455px;
+    flex-wrap: wrap;
+  }
+
+  .production__video {
+    img {
+      width: 682px;
+      height: 455px;
+    }
+
+    .production__descr {
+      width: 230px;
+      padding-left: 20px;
+    }
+  }
+}

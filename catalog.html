@@ -6,72 +6,94 @@
     <title>Мишка</title>
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__logo">
-        <a href="index.html">
-          <img src="http://placehold.it/86x35" alt="Mishka" width="86" height="35">
-        </a>
-      </div>
-      <nav class="main-nav main-nav--closed">
-        <button class="main-nav__toogle" type="button"></button>
+    <header class="page-header page-header--nojs">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <div class="main-nav__logo">
+          <a>
+            <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
+          </a>
+        </div>
+        <button class="main-nav__toogle" type="button">Меню</button>
         <ul class="main-nav__items">
           <li class="main-nav__item">
-            <a class="main-nav__item-link" href="catalog.html">Каталог товаров</a>
+            <a href="catalog.html">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--active" href="form.html">Вязание на заказ</a>
+            <a href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">Поиск по сайту</li>
-          <li class="main-nav__item">Корзина: пока пуста</li>
         </ul>
+        <ul class="main-nav__user-items">
+          <li class="main-nav__user-item main-nav__user-item--search">
+            <a href="#">Поиск по сайту</a>
+          </li>
+          <li class="main-nav__user-item main-nav__user-item--cart">
+            <a href="#">Корзина: пока пуста</a>
+          </li>
+        </ul>
+        <ul class="main-nav__help-items">
+          <li class="main-nav__help-item"><a  href="#">Новые поступления</a></li>
+          <li class="main-nav__help-item"><a href="#">Распродажа</a></li>
+        </ul>
+        <p class="main-nav__notes">Бесплатная доставка по России</p>
       </nav>
       <h1 class="page-title">Каталог товаров</h1>
     </header>
-    <!--Не уверен, насколько нужно использовать тег main -->
     <main class="page-main">
-      <section class="catalog-item">
-        <a class="catalog-item__img" href="#">
-          <img src="http://placehold.it/260x195" alt="Зайчик-попрыгайчик" width="260" height="195">
-        </a>
-        <a class="catalog-item__header" href="#">
-          <h2>Зайчик-попрыгайчик</h2>
-        </a>
-        <p class="catalog-item__descr">Рост 30 см, вес 200 г</p>
-        <span class="catalog-item__price">1 200 руб.</span>
-        <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
-      </section>
-      <section class="catalog-item">
-        <a class="catalog-item__img" href="#">
-          <img src="http://placehold.it/260x195" alt="Корзинка для белья" width="260" height="195">
-        </a>
-        <a class="catalog-item__header" href="#">
-          <h2>Корзинка для белья</h2>
-        </a>
-        <p class="catalog-item__descr">Диаметр 15 см, высота 10 см</p>
-        <span class="catalog-item__price">690 руб.</span>
-        <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
-      </section>
-      <section class="catalog-item">
-        <a class="catalog-item__img" href="#">
-          <img src="http://placehold.it/260x195" alt="Большая корзинка для игрушек" width="260" height="195">
-        </a>
-        <a class="catalog-item__header" href="#">
-          <h2>Большая корзинка для игрушек</h2>
-        </a>
-        <p class="catalog-item__descr">Диаметр 30 см, высота 30 см</p>
-        <span class="catalog-item__price">1 500 руб.</span>
-        <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
-      </section>
+      <div class="catalog-items">
+        <section class="catalog-item">
+          <a class="catalog-item__img" href="#">
+            <img src="img/photo-1-mobile@1x.jpg" alt="Зайчик-попрыгайчик" width="260" height="195">
+          </a>
+          <div class="catalog-item__wrapper">
+            <a class="catalog-item__header" href="#">
+              <h2>Зайчик-попрыгайчик</h2>
+            </a>
+            <p class="catalog-item__descr">Рост 30 см, вес 200 г</p>
+            <span class="catalog-item__price">1 200 руб.</span>
+            <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
+          </div>
+        </section>
+        <section class="catalog-item">
+          <a class="catalog-item__img" href="#">
+            <img src="img/photo-2-mobile@1x.jpg" alt="Корзинка для белья" width="260" height="195">
+          </a>
+          <div class="catalog-item__wrapper">
+            <a class="catalog-item__header" href="#">
+              <h2>Корзинка для белья</h2>
+            </a>
+            <p class="catalog-item__descr">Диаметр 15 см, высота 10 см</p>
+            <span class="catalog-item__price">690 руб.</span>
+            <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
+          </div>
+        </section>
+        <section class="catalog-item">
+          <a class="catalog-item__img" href="#">
+            <img src="img/photo-3-mobile@1x.jpg" alt="Большая корзинка для игрушек" width="260" height="195">
+          </a>
+          <div class="catalog-item__wrapper">
+            <a class="catalog-item__header" href="#">
+              <!--br временно. УБРАТЬ!  -->
+              <h2>Большая корзинка<br> для игрушек</h2>
+            </a>
+            <p class="catalog-item__descr">Диаметр 30 см, высота 30 см</p>
+            <span class="catalog-item__price">1 500 руб.</span>
+            <button class="catalog-item__add-to-cart-btn" type="button">Добавить в корзину</button>
+          </div>
+        </section>
+      </div>
       <section class="production">
         <h2 class="production__header">Процесс производства</h2>
         <div class="production__video">
-          <img src="http://placehold.it/260x150" alt="Видео" width="260"  height="150">
+          <img src="img/video-mobile@1x.jpg" alt="Видео" width="260"  height="150">
         </div>
-        <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+        <p class="production__descr">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         <a class="btn" href=#>Сделать заказ</a>
       </section>
     </main>
     <footer class="page-footer">
+      <div class="page-footer__logo">
+        <img src="img/logo-mobile.svg" alt="Мишка" width="102">
+      </div>
       <p class="page-footer__social">
         <span class="social-links">
           <a class="social-link social-link--in" href="#">Наш инстаграм</a>
@@ -80,18 +102,15 @@
         </span>
       </p>
       <p class="page-footer__copyright">
-        Разработано:
-        <a class="page-footer__copyright-link">
-          <img src="http://placehold.it/27x34" alt="HTMLAcademy" width="27" height="34">
-        </a>
+        <a href="#" class="page-footer__copyright-link">Разработано</a>
       </p>
     </footer>
-    <section class="catalog-item__modal">
-      <h2 class="catalog-item__modal-header">Добавить в корзину</h2>
+    <section class="catalog-item__modal catalog-item__modal--closed">
+      <h2 class="catalog-item__modal-header">Добавить<br>в корзину</h2>
       <form action="#" method="post">
         <fieldset class="catalog-item__modal-fieldset">
-          <legend>Выберете размер</legend>
-          <input id="size-s" type="radio" name="size" value="s">
+          <legend>Выберете размер:</legend>
+          <input id="size-s" type="radio" name="size" value="s" checked>
           <label for="size-s">S</label>
           <input id="size-m" type="radio" name="size" value="m">
           <label for="size-m">M</label>
@@ -99,7 +118,8 @@
           <label for="size-l">L</label>
         </fieldset>
       </form>
-      <button class="btn catalog-item__modal-btn" type="submit">Добавить</button>
+      <button class="btn btn--modal" type="submit">Добавить</button>
     </section>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
