@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Мишка</title>
   </head>
@@ -9,7 +10,7 @@
     <header class="page-header page-header--nojs">
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__logo">
-          <a>
+          <a href="index.html">
             <img src="img/logo-mobile.svg" alt="Mishka" width="86" height="35">
           </a>
         </div>
@@ -39,7 +40,8 @@
       <h1 class="page-title">Вязание на заказ</h1>
     </header>
     <main class="page-main">
-      <section class="order">
+      <div class="page-main__wrapper">
+        <section class="order">
         <h2 class="title title--hidden">Форма заказа</h2>
         <p class="order-form__descr">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="order__form" action="https://echo.htmlacademy.ru/" method="get">
@@ -112,6 +114,7 @@
           <button class="btn" type="submit">Отправить заказ</button>
         </form>
       </section>
+      </div>
     </main>
     <footer class="page-footer">
       <div class="page-footer__logo">
