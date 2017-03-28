@@ -5,74 +5,75 @@
   display: flex;
   flex-direction: column;
   margin-top: -75px;
+}
 
-  &__btn {
-    padding-top: 25px;
-    padding-right: 180px;
-    padding-left: 30px;
-    padding-bottom: 30px;
+.category__btn {
+  padding-top: 25px;
+  padding-right: 180px;
+  padding-left: 30px;
+  padding-bottom: 30px;
 
-    font-size: 19px;
-    font-weight: bold;
-    text-decoration: none;
+  font-size: 19px;
+  font-weight: bold;
+  text-decoration: none;
 
-    color: #ffffff;
+  color: #ffffff;
+}
 
-    &:hover {
-      padding-top: 25px;
-      padding-bottom: 40px;
-      background-position-y: 20px;
-    }
-
-    &:active {
-      color: rgba(255, 255, 255, 0.3);
-    }
+.category__btn--left,
+.category__btn--right {
+  &:hover {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background-position-y: 20px;
   }
 
-  &__btn--left {
-    background-color: #63d1bb;
-    background-image: url("../img/icon-interior.svg");
-    background-position: 244px center;
-    background-repeat: no-repeat;
-
-    &:hover {
-      background-color: #59d5bc;
-    }
-  }
-
-  &__btn--right {
-    background-color: #56c3b2;
-    background-image: url("../img/icon-toy.svg");
-    background-position: 234px center;
-    background-repeat: no-repeat;
-
-    &:hover {
-      background-color: #46c1ae;
-    }
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
   }
 }
+
+.category__btn--left {
+  background-color: #63d1bb;
+  background-image: url("../img/icon-interior.svg");
+  background-position: 244px center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-color: #59d5bc;
+  }
+}
+
+.category__btn--right {
+  background-color: #56c3b2;
+  background-image: url("../img/icon-toy.svg");
+  background-position: 234px center;
+  background-repeat: no-repeat;
+
+  &:hover {
+    background-color: #46c1ae;
+  }
+}
+
 
 @media @tablet-width {
   .category {
     padding-left: 50px;
     padding-right: 50px;
     flex-direction: row;
+  }
+  .category__btn {
+    width: 334px;
+    box-sizing: border-box;
 
-    &__btn {
-      width: 334px;
-      box-sizing: border-box;
-
-      font-size: 20px;
-      line-height: 30px;
-    }
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media @desktop-width {
-  .category {
-    &__btn {
-      width: 525px;
-      padding-right: 350px;
-    }
+  .category__btn {
+    width: 525px;
+    padding-right: 350px;
   }
 }
