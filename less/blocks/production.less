@@ -77,29 +77,40 @@
 
 @media @desktop-width {
   .production {
-    height: 455px;
+    position: relative;
     flex-wrap: wrap;
+    min-height: 455px;
+    margin-bottom: 106px;
   }
 
   .production__wrapper {
     width: 366px;
-    padding-left: 77px;
-    padding-right: 56px;
+    margin-left: 682px;
+    padding-left: 80px;
+    padding-right: 54px;
     border-left: none;
     box-sizing: border-box;
   }
 
   .production__header {
     padding-left: 0;
+    padding-top: 78px;
+    margin-bottom: 22px;
   }
 
-  .production__video img {
-    width: 682px;
-    height: 455px;
+  .production__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      width: 682px;
+      height: 455px;
+    }
   }
 
   .production__descr {
-    height: 261px;
+    margin-top: 1px;
+    margin-bottom: 46px;
   }
 
 }
