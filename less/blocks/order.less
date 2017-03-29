@@ -326,3 +326,38 @@
     line-height: 30px;
   }
 }
+
+@media @desktop-width {
+  // .order-form__descr {
+  //   padding-right: 175px;
+  // }
+
+  .order-form__fieldset {
+    padding-left: 0;
+  }
+
+  .order-form__legend {
+    left: -112px;
+  }
+
+  .order-form__flex-wrapper p {
+    margin-right: 22px;
+
+    &:nth-child(2n) {
+      margin-right: 22px;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  .order-form__fieldset--name .order-form__legend {
+    top: 22px;
+    left: -114px;
+  }
+
+  .order-form__fieldset--comments {
+    margin-bottom: 43px;
+  }
+}

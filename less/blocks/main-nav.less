@@ -122,6 +122,20 @@
       display: none;
     }
   }
+
+  //если JS не работает
+  .main-nav--nojs {
+    position: static;
+
+    .main-nav__toogle {
+      display: none;
+    }
+
+    .main-nav__items,
+    .main-nav__user-items {
+      display: block;
+    }
+  }
 }
 
 .main-nav__user-item--search {
@@ -250,18 +264,19 @@
   }
 
   .main-nav__logo {
-    width: 288px;
+    width: 289px;
     box-sizing: border-box;
   }
 
   .main-nav__items {
     order: -3;
     padding: 0;
+    background-color: #ffffff;
   }
 
   .main-nav__item {
     padding-right: 35px;
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 35px;
     padding-left: 50px;
     border-bottom: 1px solid #ececec;
@@ -277,14 +292,14 @@
   }
 
   .main-nav__user-item {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
   }
 
   .main-nav__help-items {
     display: flex;
-    padding-top: 22px;
+    padding-top: 16px;
     padding-left: 50px;
   }
 
@@ -296,18 +311,12 @@
       text-decoration: none;
     }
   }
-}
 
-//если JS не работает
-.main-nav--nojs {
-  position: static;
-
-  .main-nav__toogle {
-    display: none;
+  .main-nav__user-item--cart {
+    width: 316px;
   }
 
-  .main-nav__items,
-  .main-nav__user-items {
-    display: block;
+  .main-nav__user-item--search {
+    width: 85px;
   }
 }
