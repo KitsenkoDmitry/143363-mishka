@@ -18,6 +18,14 @@
 .catalog-item__header {
   color: #000000;
   text-decoration: none;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .catalog-item__header h2 {
@@ -197,6 +205,13 @@
 
     &:nth-child(3n) {
       margin-right: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 9px 0 #ececec;
+    }
+    &:active {
+      box-shadow: 0 2px 5px 0 #ececec;
     }
   }
 
