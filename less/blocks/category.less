@@ -61,14 +61,30 @@
   .category {
     padding-left: 50px;
     padding-right: 50px;
-    flex-direction: row;
+    font-size: 0;
+    background-color: #f8f8f8;
   }
+
   .category__btn {
     width: 334px;
+    padding-top: 28px;
+    padding-left: 36px;
     box-sizing: border-box;
 
     font-size: 20px;
     line-height: 30px;
+
+    &--left {
+      background-position-x: 257px;
+    }
+    &--right {
+      background-position-x: 240px;
+    }
+
+    &:hover {
+      padding-top: 28px;
+      background-position-y: 30px;
+    }
   }
 }
 
