@@ -12,16 +12,16 @@
 
 .main-nav__logo {
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 19px;
+  padding-bottom: 18px;
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
 }
 
 .main-nav__toogle {
   position: absolute;
-  top: 35px;
-  right: 27px;
+  top: 32px;
+  right: 31px;
   z-index: 2;
 
   display: block;
@@ -122,6 +122,20 @@
       display: none;
     }
   }
+
+  //если JS не работает
+  .main-nav--nojs {
+    position: static;
+
+    .main-nav__toogle {
+      display: none;
+    }
+
+    .main-nav__items,
+    .main-nav__user-items {
+      display: block;
+    }
+  }
 }
 
 .main-nav__user-item--search {
@@ -129,8 +143,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 37px;
+    left: 32px;
 
     display: block;
     width: 18px;
@@ -169,8 +183,13 @@
   .main-nav {
     position: static;
     width: 768px;
-    justify-content: space-between;
+    // justify-content: space-between;
     flex-direction: row;
+    background-color: #f1f1f1;
+
+    &--index {
+      background-color: #f9f9f9;
+    }
   }
 
   .main-nav__logo {
@@ -178,6 +197,7 @@
     width: 325px;
     padding-left: 45px;
     text-align: left;
+    background-color: #ffffff;
   }
 
   .main-nav__toogle {
@@ -187,19 +207,22 @@
   .main-nav__notes {
     display: block;
     padding-right: 50px;
-    padding-top: 22px;
+    padding-top: 17px;
     margin: 0;
+    margin-left: auto;
   }
 
   .main-nav__items {
     display: flex;
     padding-left: 50px;
-    padding-top: 22px;
+    padding-top: 17px;
+
   }
 
   .main-nav__user-items {
     order: -1;
     display: flex;
+    background-color: #ffffff;
   }
 
   .main-nav__item {
@@ -212,10 +235,10 @@
   }
 
   .main-nav__user-item {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 75px;
-    padding-right: 50px;
+    padding-top: 31px;
+    padding-bottom: 32px;
+    padding-left: 83px;
+    padding-right: 49px;
     box-sizing: border-box;
     a {
       padding: 0;
@@ -227,7 +250,7 @@
   }
 
   .main-nav__user-item--search {
-    width: 82px;
+    width: 84px;
     padding-right: 0;
     padding-left: 0;
     border-left: 1px solid #ececec;
@@ -245,18 +268,19 @@
   }
 
   .main-nav__logo {
-    width: 288px;
+    width: 289px;
     box-sizing: border-box;
   }
 
   .main-nav__items {
     order: -3;
     padding: 0;
+    background-color: #ffffff;
   }
 
   .main-nav__item {
     padding-right: 35px;
-    padding-top: 35px;
+    padding-top: 30px;
     padding-bottom: 35px;
     padding-left: 50px;
     border-bottom: 1px solid #ececec;
@@ -272,14 +296,14 @@
   }
 
   .main-nav__user-item {
-    padding-top: 35px;
-    padding-bottom: 35px;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
   }
 
   .main-nav__help-items {
     display: flex;
-    padding-top: 22px;
+    padding-top: 16px;
     padding-left: 50px;
   }
 
@@ -291,18 +315,12 @@
       text-decoration: none;
     }
   }
-}
 
-//если JS не работает
-.main-nav--nojs {
-  position: static;
-
-  .main-nav__toogle {
-    display: none;
+  .main-nav__user-item--cart {
+    width: 316px;
   }
 
-  .main-nav__items,
-  .main-nav__user-items {
-    display: block;
+  .main-nav__user-item--search {
+    width: 85px;
   }
 }

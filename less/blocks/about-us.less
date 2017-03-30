@@ -2,32 +2,34 @@
   padding-left: 30px;
   padding-right: 30px;
   margin-bottom: 55px;
-  &__descr {
-    padding-top: 55px;
-    margin-bottom: 25px;
+}
 
-    font-size: 17px;
-    line-height: 20px;
-    color: #000000;
-    font-weight: bold;
-    background-image: url("../img/icon-feature-1.svg");
-    background-repeat: no-repeat;
-    background-position: left top;
+.about-us__descr {
+  padding-top: 57px;
+  margin-bottom: 27px;
+
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  font-weight: bold;
+  background-image: url("../img/icon-feature-1.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+
+  &--2 {
+    background-image: url("../img/icon-feature-3.svg");
   }
-  &__descr--2 {
-      background-image: url("../img/icon-feature-3.svg");
+  &--3 {
+    background-image: url("../img/icon-feature-5.svg");
   }
-  &__descr--3 {
-      background-image: url("../img/icon-feature-5.svg");
+  &--4 {
+    background-image: url("../img/icon-feature-2.svg");
   }
-  &__descr--4 {
-      background-image: url("../img/icon-feature-2.svg");
+  &--5 {
+    background-image: url("../img/icon-feature-4.svg");
   }
-  &__descr--5 {
-      background-image: url("../img/icon-feature-4.svg");
-  }
-  &__descr--6 {
-      background-image: url("../img/icon-feature-6.svg");
+  &--6 {
+    background-image: url("../img/icon-feature-6.svg");
   }
 }
 
@@ -37,10 +39,32 @@
     flex-wrap: wrap;
     padding-left: 50px;
     padding-right: 50px;
+    margin-top: 19px;
+    margin-bottom: 16px;
   }
 
   .about-us__descr {
     flex-basis: 334px;
+    order: 1;
+    margin-bottom: 36px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &--2 {
+      order: 3;
+    }
+    &--3 {
+      order: 5;
+    }
+    &--4 {
+      order: 2;
+    }
+    &--5 {
+      order: 4;
+    }
+    &--6 {
+      order: 6;
+    }
   }
 }
 
@@ -48,6 +72,7 @@
   .about-us {
     padding-left: 225px;
     padding-right: 225px;
+    margin-bottom: 22px;
   }
   .about-us__descr {
     flex-basis: 350px;
