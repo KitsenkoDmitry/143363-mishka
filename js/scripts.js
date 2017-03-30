@@ -4,6 +4,8 @@ var pageHeader = document.querySelector(".page-header");
 
 var catalogModal = document.querySelector(".catalog-item__modal");
 var productBtn = document.querySelector(".btn--product");
+var modalCover = document.querySelector(".modal-cover");
+var modalBtn = document.querySelector(".btn--modal");
 
 pageHeader.classList.remove("page-header--nojs");
 navMain.classList.remove("main-nav--nojs");
@@ -23,8 +25,12 @@ productBtn.addEventListener("click", function() {
   if (catalogModal.classList.contains("catalog-item__modal--closed")) {
     catalogModal.classList.remove("catalog-item__modal--closed");
     catalogModal.classList.add("catalog-item__modal--opened");
-  } else {
-    catalogModal.classList.remove("catalog-item__modal--opened");
-    catalogModal.classList.add("catalog-item__modal--closed");
+    modalCover.classList.add("modal-cover--show");
   }
+});
+
+modalBtn.addEventListener("click", function() {
+  catalogModal.classList.remove("catalog-item__modal--opened");
+  catalogModal.classList.add("catalog-item__modal--closed");
+  modalCover.classList.remove("modal-cover--show");
 });
