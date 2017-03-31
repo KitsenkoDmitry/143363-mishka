@@ -56,19 +56,20 @@
   border: none;
   outline: none;
   background-color: #ffffff;
+  cursor: pointer;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 21px;
-    height: 19px;
-    bottom: 4px;
-    right:0;
-    background-image: url("../img/icon-cart.svg");
-    background-position: center;
-    background-repeat: no-repeat;
+.catalog-item__add-to-cart-btn .icon-cart {
+  position: absolute;
+  right: 0;
+  bottom: 4px;
 
-    cursor: pointer;
+  &:hover path {
+    fill: rgba(99, 209, 187, 1);
+  }
+
+  &:active path {
+    fill: rgba(99, 209, 187, 0.3);
   }
 }
 

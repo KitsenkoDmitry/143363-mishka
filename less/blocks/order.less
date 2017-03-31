@@ -8,6 +8,7 @@
 }
 
 .order-form__fieldset {
+  position: relative;//для иконок
   border: none;
   margin: 0;
   margin-bottom: 16px;
@@ -16,6 +17,11 @@
   border-top: 1px solid #63d1bb;
 }
 
+.order-form__icon {
+  position: absolute;
+  right: 5px;
+  top: 36px;
+}
 
 .order-form__label {
   position: relative;
@@ -163,6 +169,16 @@
 .order-form__fieldset textarea:hover,
 .order-form__fieldset input:hover {
   border-color: #62d1ba;
+  cursor: pointer;
+}
+
+.order-form__fieldset input + .order-form__icon path {
+  fill: rgba(0, 0, 0, 0.2);
+}
+
+.order-form__fieldset input:hover + .order-form__icon path,
+.order-form__fieldset input:focus + .order-form__icon path {
+  fill: #62d1ba;
 }
 
 .order-form__fieldset textarea:focus {
@@ -324,6 +340,16 @@
     padding-top: 14px;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .order-form__icon.icon-phone {
+    top: 61px;
+    right: 7px;
+  }
+
+  .order-form__icon.icon-mail {
+    top: 10px;
+    right: 4px;
   }
 }
 

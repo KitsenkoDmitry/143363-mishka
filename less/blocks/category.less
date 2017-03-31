@@ -1,12 +1,10 @@
 .category {
   position: relative;
   z-index: 5;
-  // display: flex;
-  // flex-direction: column;
-  // margin-top: -75px;
 }
 
 .category__btn {
+  position: relative;
   .dib();
   padding-top: 25px;
   padding-right: 180px;
@@ -18,28 +16,43 @@
   text-decoration: none;
 
   color: #ffffff;
-}
 
-.category__btn--left,
-.category__btn--right {
+  .icon-interior path,
+  .icon-toy path {
+    fill: rgba(20, 144, 128, 0.5);
+  }
+
   &:hover {
     margin-top: -5px;
     padding-top: 25px;
     padding-bottom: 35px;
-    background-position-y: 20px;
+
+    .icon-interior path,
+    .icon-toy path {
+      fill: rgba(20, 144, 128, 0.7);
+    }
+
   }
 
   &:active {
     color: rgba(255, 255, 255, 0.3);
+
+    .icon-interior path,
+    .icon-toy path {
+      fill: rgba(20, 144, 128, 0.3);
+    }
+
   }
 }
 
 .category__btn--left {
   background-color: #63d1bb;
-  background-image: url("../img/icon-interior.svg");
-  background-position: 244px center;
-  background-repeat: no-repeat;
 
+  .icon-interior {
+    position: absolute;
+    top: 29px;
+    right: 36px;
+  }
   &:hover {
     background-color: #59d5bc;
   }
@@ -47,9 +60,12 @@
 
 .category__btn--right {
   background-color: #56c3b2;
-  background-image: url("../img/icon-toy.svg");
-  background-position: 234px center;
-  background-repeat: no-repeat;
+
+  .icon-toy {
+    position: absolute;
+    top: 31px;
+    right: 33px;
+  }
 
   &:hover {
     background-color: #46c1ae;
@@ -63,6 +79,10 @@
     padding-right: 50px;
     font-size: 0;
     background-color: #f8f8f8;
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position-y: 108px;
+    background-size: 778px;
   }
 
   .category__btn {
@@ -74,16 +94,21 @@
     font-size: 20px;
     line-height: 30px;
 
+    background-image: url("../img/bg-zigzag-fill.svg");
+    background-repeat: no-repeat;
+    background-position-y: 107px;
+    background-size: 778px;
+
     &--left {
-      background-position-x: 257px;
+      background-position-x: -14px;
     }
     &--right {
-      background-position-x: 240px;
+      background-position-x: -2px;
     }
 
     &:hover {
       padding-top: 28px;
-      background-position-y: 30px;
+      background-position-y: 112px;
     }
   }
 }
@@ -91,17 +116,25 @@
 @media @desktop-width {
   .category {
     margin-bottom: 74px;
+    background-position-y: 105px;
+    background-size: 1150px;
   }
 
   .category__btn {
     width: 525px;
     padding-right: 350px;
+    background-size: 1150px;
+    background-position-y: 104px;
 
     &--left {
-      background-position-x: 448px;
+      background-position-x: -46px;
     }
     &--right {
-      background-position-x: 428px;
+      background-position-x: 0;
+    }
+
+    &:hover {
+      background-position-y: 109px;
     }
   }
 }

@@ -11,6 +11,7 @@
 }
 
 .production__header {
+  position: relative;//для иконки видео
   color: #000000;
   font-size: 17px;
   padding-left: 55px;
@@ -18,8 +19,39 @@
   padding-bottom: 11px;
 }
 
+.production__header .icon-video {
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
 .production__video {
   position: relative; //для кнопки play
+}
+
+.production__video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 0;
+
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover .icon-play {
+    width: 120px;
+    height: 92.2692px;
+  }
+
+  &:active .icon-play {
+    width: 80px;
+    height: 61.5128px
+  }
 }
 
 .production__video img {
@@ -81,6 +113,13 @@
     flex-wrap: wrap;
     min-height: 455px;
     margin-bottom: 106px;
+
+    &:hover {
+      box-shadow: 0 4px 9px 0 #ececec;
+    }
+    &:active {
+      box-shadow: 0 2px 5px 0 #ececec;
+    }
   }
 
   .production__wrapper {
@@ -96,6 +135,10 @@
     padding-left: 0;
     padding-top: 78px;
     margin-bottom: 22px;
+  }
+
+  .production__header .icon-video {
+    top: 23px;
   }
 
   .production__video {

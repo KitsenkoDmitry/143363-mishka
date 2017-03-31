@@ -1,18 +1,20 @@
 .social-link {
+  position: relative; //для fb
   display: block;
-  width: 22px;
+  width: 24px;
   height: 35px;
   font-size: 0;
-  background-repeat: no-repeat;
-  background-position: center;
 
-  &--in {
-    background-image: url("../img/icon-insta.svg");
+  &--fb .icon-fb {
+    position: absolute;
+    top: -6px;
+    left: 4px;
   }
-  &--fb {
-    background-image: url("../img/icon-fb.svg");
+
+  &:hover path {
+    fill: rgb(70, 193, 174);
   }
-  &--tw {
-    background-image: url("../img/icon-twitter.svg");
+  &:active path {
+    fill: rgba(70, 193, 174, 0.3);
   }
 }

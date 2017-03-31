@@ -23,28 +23,24 @@
   font-weight: bold;
   text-decoration: none;
 
-  &::after {
-    content: "";
+  .logo-htmlacademy {
     position: absolute;
     right: 37px;
     top: 50%;
     transform: translateY(-50%);
-    width: 27px;
-    height: 34px;
-    background-image: url("../img/logo-htmlacademy.svg");
-    background-repeat: no-repeat;
-    background-position: center right;
   }
 
-  &:hover {
-
+  &:hover .logo-htmlacademy path {
+    fill: rgb(70, 193, 174);
   }
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
   }
+  &:active .logo-htmlacademy path {
+    fill: rgba(70, 193, 174, 0.3);
+  }
 }
-
 
 .page-footer__logo {
   display: none;
@@ -58,7 +54,7 @@
   }
 
   .page-footer__social {
-    padding-top: 4px;
+    padding-top: 11px;
     margin: 0;
     margin-right: 80px;
     flex-basis: 150px;
@@ -67,6 +63,13 @@
   .page-footer__logo {
     display: block;
     margin-right: 160px;
+
+    &:hover path {
+      fill: rgb(70, 193, 174);
+    }
+    &:active path {
+      fill: rgba(70, 193, 174, 0.3);
+    }
   }
 
   .page-footer__copyright {
@@ -77,7 +80,7 @@
   .page-footer__copyright-link {
     padding-right: 57px;
 
-    &::after {
+    .logo-htmlacademy {
       right: 0;
     }
   }
