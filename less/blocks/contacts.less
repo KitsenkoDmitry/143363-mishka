@@ -2,6 +2,10 @@
   margin-bottom: 40px;
 }
 
+.contacts .icon-flag {
+  display: none;
+}
+
 .contacts__wrapper {
   padding-left: 30px;
   padding-right: 30px;
@@ -51,6 +55,14 @@
 @media @tablet-width {
   .contacts {
     margin-bottom: 57px;
+    position: relative;
+  }
+
+  .contacts .icon-flag {
+    position: absolute;
+    top: -16px;
+    right: 53px;
+    display: block;
   }
 
   .contacts__wrapper {
@@ -92,8 +104,19 @@
     height: 460px;
     padding-left: 225px;
     padding-right: 50px;
-    padding-top: 64px;
+    padding-top: 93px;
     margin-bottom: 103px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    background-size: 1150 auto;
+  }
+
+  .contacts .icon-flag {
+    position: absolute;
+    top: 154px;
+    left: 113px;
   }
 
   .contacts__wrapper {
@@ -112,9 +135,9 @@
   }
 
   .contacts__map {
-     order: 3;
-     img {
-       width: 525px;
-     }
+    order: 3;
+    img {
+      width: 525px;
+    }
   }
 }

@@ -11,6 +11,7 @@
 }
 
 .production__header {
+  position: relative;//для иконки видео
   color: #000000;
   font-size: 17px;
   padding-left: 55px;
@@ -18,8 +19,39 @@
   padding-bottom: 11px;
 }
 
+.production__header .icon-video {
+  position: absolute;
+  top: 16px;
+  left: 0;
+}
+
 .production__video {
   position: relative; //для кнопки play
+}
+
+.production__video-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 0;
+
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover .icon-play {
+    width: 120px;
+    height: 92.2692px;
+  }
+
+  &:active .icon-play {
+    width: 80px;
+    height: 61.5128px
+  }
 }
 
 .production__video img {
@@ -78,14 +110,27 @@
 @media @desktop-width {
   .production {
     position: relative;
-    flex-wrap: wrap;
+    display: block;
     min-height: 455px;
     margin-bottom: 106px;
+
+    &:hover {
+      box-shadow: 0 4px 9px 0 #ececec;
+    }
+    &:active {
+      box-shadow: 0 2px 5px 0 #ececec;
+    }
+  }
+
+  .production__video {
+    position: relative;
+    float: left;
+    width: 682px;
   }
 
   .production__wrapper {
+    float: right;
     width: 366px;
-    margin-left: 682px;
     padding-left: 80px;
     padding-right: 54px;
     border-left: none;
@@ -98,14 +143,13 @@
     margin-bottom: 22px;
   }
 
-  .production__video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    img {
-      width: 682px;
-      height: 455px;
-    }
+  .production__header .icon-video {
+    top: 23px;
+  }
+
+  .production__video img {
+    width: 682px;
+    height: 455px;
   }
 
   .production__descr {
