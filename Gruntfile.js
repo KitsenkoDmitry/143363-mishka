@@ -4,12 +4,11 @@ module.exports = function(grunt) {
 
   require("load-grunt-tasks")(grunt);
 
-
   grunt.initConfig({
     clean: {
       build: ["build"]
     },
-    сopy: {
+    copy: {
       build: {
         files: [{
           expand: true,
@@ -27,8 +26,8 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           src: ["*.html"],
-          dest:"build"
-        }]
+          dest: "build"
+      }]
       }
     },
     svgmin: {
