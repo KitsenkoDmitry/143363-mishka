@@ -8,7 +8,7 @@
 }
 
 .order-form__fieldset {
-  position: relative;//для иконок
+  //position: relative;//для иконок
   border: none;
   margin: 0;
   margin-bottom: 16px;
@@ -17,10 +17,14 @@
   border-top: 1px solid #63d1bb;
 }
 
+.order-form__fieldset-wrapper {
+  position: relative; //для иконок
+}
+
 .order-form__icon {
   position: absolute;
-  right: 5px;
-  top: 36px;
+  right: 6px;
+  top: -1px;
 }
 
 .order-form__label {
@@ -194,8 +198,7 @@
   }
 
   .order-form__fieldset  {
-    position: relative;
-    // display: flex;
+    position: relative; //для legend
     padding-left: 167px;
     margin-bottom: 11px;
     border-top: none;
@@ -342,15 +345,20 @@
     line-height: 30px;
   }
 
-  .order-form__icon.icon-phone {
-    top: 61px;
-    right: 7px;
+  .order-form__icon {
+    top: 0;
+    right: 24px;
   }
 
-  .order-form__icon.icon-mail {
-    top: 10px;
-    right: 4px;
-  }
+  // .order-form__icon.icon-phone {
+  //   top: 61px;
+  //   right: 7px;
+  // }
+  //
+  // .order-form__icon.icon-mail {
+  //   top: 10px;
+  //   right: 4px;
+  // }
 }
 
 @media @desktop-width {
@@ -385,5 +393,10 @@
 
   .order-form__fieldset--comments {
     margin-bottom: 43px;
+  }
+
+  .order-form__icon {
+    top: -2px;
+    right: 4px;
   }
 }
