@@ -6,12 +6,16 @@ module.exports = function(grunt) {
 
 
   grunt.initConfig({
+    clean: {
+      build: ["build"]
+    },
     сopy: {
       build: {
         files: [{
           expand: true,
           src: [
             "fonts/**/*.{woff,woff2}",
+            "!**/icons/**",
             "img/**",
             "js/**",
             "*.html"
@@ -27,13 +31,31 @@ module.exports = function(grunt) {
         }]
       }
     },
-    clean: {
-      build: ["build"]
+    svgmin: {
+      symbols: {
+        files: [{
+          expand: true,
+          src: ["build/img/*.svg"]
+        }]
+      }
     },
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["build/img/**/*.{png,jpg,gif}"]
+        }]
+      }
+    },
+
     less: {
       style: {
         files: {
-          "build/css/style.css": "less/style.less"
+          "build/css/style.css": ["less/style.less"]
         }
       }
     },
@@ -74,41 +96,16 @@ module.exports = function(grunt) {
         }
       }
     },
-    svgmin: {
-      symbols: {
-        files: [{
-          expand: true,
-          src: ["build/img/icons/*.svg"]
-        }]
-      }
-    },
-    imagemin: {
-      images: {
-        options: {
-          optimizationLevel: 3,
-          progressive: true
-        },
-        files: [{
-          expand: true,
-          src: ["build/img/**/*.{png,jpg,gif}"]
-        }]
-      }
-    },
+
+
     browserSync: {
       server: {
         bsFiles: {
-          src: [
-            "build/*.html",
-            "build/css/*.css"
-          ]
+          src: ["build/*.html", "build/css/*.css"]
         },
         options: {
           server: "build/",
-          watchTask: true//,
-          // notify: false,
-          // open: true,
-          // cors: true,
-          // ui: false
+          watchTask: true
         }
       }
     },
@@ -116,7 +113,7 @@ module.exports = function(grunt) {
       html: {
         files: ["*.html"],
         tasks: ["copy:html"]
-      }
+      },
       style: {
         files: ["less/**/*.less"],
         tasks: ["less", "postcss", "csso"]
@@ -127,7 +124,6 @@ module.exports = function(grunt) {
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
   grunt.registerTask("symbols", ["svgmin", "svgstore"]);
-
   grunt.registerTask("build", [
     "clean",
     "copy",
