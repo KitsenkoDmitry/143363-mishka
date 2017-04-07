@@ -1,0 +1,52 @@
+.wrapper {
+  width: 100%;
+
+  &--gray {
+    background-color: #f1f1f1;
+  }
+
+  &--index {
+    position: relative; //for zig-zag
+    background-color: #f9f9f9;
+  }
+
+  &--zigzag-line {
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: repeat-x;
+    background-size: 350px auto;
+    background-position-x: center;
+    background-position-y: bottom;
+  }
+}
+
+@media @tablet-width {
+  .wrapper {
+    &--zigzag-fill {
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+      background-size: 778px auto;
+      background-position-x: center;
+      background-position-y: bottom;
+    }
+
+    &--zigzag-line {
+      background-size: 800px auto;
+    }
+
+    &--catalog {
+      background-color: #f1f1f1;
+    }
+
+
+  }
+}
+
+@media @desktop-width {
+  .wrapper {
+    &--zigzag-fill,
+    &--zigzag-line {
+      background-size: 1150px auto;
+    }
+
+  }
+}

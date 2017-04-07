@@ -27,7 +27,7 @@ module.exports = function(grunt) {
           expand: true,
           src: ["*.html"],
           dest: "build"
-      }]
+        }]
       }
     },
     svgmin: {

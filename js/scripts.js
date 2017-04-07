@@ -3,7 +3,7 @@ var navToogle = document.querySelector(".main-nav__toogle");
 var pageHeader = document.querySelector(".page-header");
 
 var catalogModal = document.querySelector(".catalog-item__modal");
-var catalogItemBtn = document.querySelector(".catalog-item__add-to-cart-btn");
+var catalogItemBtn = document.querySelectorAll(".catalog-item__add-to-cart-btn");
 var productBtn = document.querySelector(".btn--product");
 var modalCover = document.querySelector(".modal-cover");
 var modalBtn = document.querySelector(".btn--modal");
@@ -30,6 +30,13 @@ catalogItemBtn.addEventListener("click", function() {
   }
 });
 
+
+modalBtn.addEventListener("click", function() {
+  catalogModal.classList.remove("catalog-item__modal--opened");
+  catalogModal.classList.add("catalog-item__modal--closed");
+  modalCover.classList.remove("modal-cover--show");
+});
+
 productBtn.addEventListener("click", function() {
   event.preventDefault();
   if (catalogModal.classList.contains("catalog-item__modal--closed")) {
@@ -37,10 +44,4 @@ productBtn.addEventListener("click", function() {
     catalogModal.classList.add("catalog-item__modal--opened");
     modalCover.classList.add("modal-cover--show");
   }
-});
-
-modalBtn.addEventListener("click", function() {
-  catalogModal.classList.remove("catalog-item__modal--opened");
-  catalogModal.classList.add("catalog-item__modal--closed");
-  modalCover.classList.remove("modal-cover--show");
 });

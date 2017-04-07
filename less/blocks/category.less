@@ -1,6 +1,9 @@
 .category {
   position: relative;
   z-index: 5;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .category__btn {
@@ -75,39 +78,25 @@
 
 @media @tablet-width {
   .category {
+    width: 768px;
     padding-left: 50px;
     padding-right: 50px;
     font-size: 0;
-    background-color: #f8f8f8;
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: no-repeat;
-    background-position-y: 108px;
-    background-size: 778px;
   }
 
   .category__btn {
     width: 334px;
     padding-top: 28px;
     padding-left: 36px;
+    padding-bottom: 41px;
     box-sizing: border-box;
 
     font-size: 20px;
     line-height: 30px;
 
-    background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: no-repeat;
-    background-position-y: 107px;
-    background-size: 778px;
-
-    &--left {
-      background-position-x: -14px;
-    }
-    &--right {
-      background-position-x: -2px;
-    }
-
     &:hover {
       padding-top: 28px;
+      padding-bottom: 46px;
       background-position-y: 112px;
     }
   }
@@ -115,7 +104,8 @@
 
 @media @desktop-width {
   .category {
-    margin-bottom: 74px;
+    width: 1150px;
+    margin-bottom: 53px;
     background-position-y: 105px;
     background-size: 1150px;
   }
@@ -123,18 +113,6 @@
   .category__btn {
     width: 525px;
     padding-right: 350px;
-    background-size: 1150px;
-    background-position-y: 104px;
-
-    &--left {
-      background-position-x: -46px;
-    }
-    &--right {
-      background-position-x: 0;
-    }
-
-    &:hover {
-      background-position-y: 109px;
-    }
+    padding-bottom: 50px;
   }
 }

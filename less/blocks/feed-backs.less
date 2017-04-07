@@ -1,14 +1,11 @@
 .feed-backs {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 35px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 51px;
-  margin-bottom: 35px;
-
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: no-repeat;
-  background-size: 320px auto;
-  background-position: 0 bottom;
-
+  box-sizing: border-box;
 }
 
 .feed-backs__quote {
@@ -76,17 +73,17 @@
 @media @tablet-width {
   .feed-backs {
     position: relative;
+    width: 768px;
     padding-left: 50px;
     padding-right: 50px;
     padding-top: 75px;
-    padding-bottom: 103px;
+    padding-bottom: 157px;//zig-zag
     margin-bottom: 61px;
 
-    background-color: #ffffff;
-    background-image: url("../img/review@1x.jpg"), url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: left 29px, 0 bottom;
-    background-size: auto, 768px auto;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: left 29px;
+    background-size: auto;
   }
 
   .feed-backs__quote {
@@ -106,7 +103,7 @@
 
   .feed-backs__btn-wrapper {
     position: absolute;
-    bottom: 99px;
+    bottom: 151px;
     right: 48px;
   }
 
@@ -125,9 +122,9 @@
 
 @media @desktop-width {
   .feed-backs {
+    width: 1050px;
+    box-sizing: border-box;
     padding-left: 175px;
-    margin-left: 50px;
-    margin-right: 50px;
     margin-bottom: 32px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
@@ -141,5 +138,6 @@
 
   .feed-backs__btn-wrapper {
     right: 0;
+
   }
 }

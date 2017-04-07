@@ -1,11 +1,9 @@
 .product {
+  width: 260px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 43px; //для зиг зага
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-repeat: no-repeat;
-  background-position: 0 bottom;
-  background-size: 320px auto;
+  margin: 0 auto;
 }
 
 .product__title {
@@ -62,18 +60,18 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 668px;
     height: 537px;
     padding-left: 47px;
     padding-right: 50px;
-    padding-top: 46px;
+    padding-top: 35px;
     padding-bottom: 44px;
-
-    background-size: 768px auto;
+    box-sizing: content-box;
   }
 
   .product__title {
     position: absolute;
-    top: 46px;
+    top: 34px;
     left: 47px;
     padding: 0;
     margin: 0;
@@ -128,12 +126,12 @@
 
 @media @desktop-width {
   .product {
-    height: 636px;
+    width: 875px;
+    height: 642px;
     padding-top: 0px;
-    padding-bottom: 99px;
+    padding-bottom: 93px;
     padding-left: 225px;
     margin-bottom: 28px;
-    background-size: 1150px auto;
   }
 
   .product__title {
