@@ -3,6 +3,7 @@ var navToogle = document.querySelector(".main-nav__toogle");
 var pageHeader = document.querySelector(".page-header");
 
 var catalogModal = document.querySelector(".catalog-item__modal");
+var catalogItemBtn = document.querySelector(".catalog-item__add-to-cart-btn");
 var productBtn = document.querySelector(".btn--product");
 var modalCover = document.querySelector(".modal-cover");
 var modalBtn = document.querySelector(".btn--modal");
@@ -17,6 +18,15 @@ navToogle.addEventListener("click", function() {
   } else {
     navMain.classList.remove("main-nav--opened");
     navMain.classList.add("main-nav--closed");
+  }
+});
+
+catalogItemBtn.addEventListener("click", function() {
+  event.preventDefault();
+  if (catalogModal.classList.contains("catalog-item__modal--closed")) {
+    catalogModal.classList.remove("catalog-item__modal--closed");
+    catalogModal.classList.add("catalog-item__modal--opened");
+    modalCover.classList.add("modal-cover--show");
   }
 });
 

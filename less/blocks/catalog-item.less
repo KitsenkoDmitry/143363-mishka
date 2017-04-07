@@ -50,25 +50,17 @@
 
 .catalog-item__add-to-cart-btn {
   font-size: 0;
-  position: absolute;
-  bottom: 28px;
-  right: 27px;
+  float: right;
   border: none;
   outline: none;
   background-color: #ffffff;
   cursor: pointer;
-}
 
-.catalog-item__add-to-cart-btn .icon-cart {
-  position: absolute;
-  right: 0;
-  bottom: 4px;
-
-  &:hover path {
+  &:hover .icon-cart path {
     fill: rgba(99, 209, 187, 1);
   }
 
-  &:active path {
+  &:active .icon-cart path {
     fill: rgba(99, 209, 187, 0.3);
   }
 }
@@ -223,7 +215,7 @@
   .catalog-item__wrapper {
     width: 316px;
     box-sizing: border-box;
-    min-height: 196px;
+    height: 100%;
   }
 
   .catalog-item__img img {
